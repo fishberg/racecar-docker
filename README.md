@@ -1,9 +1,5 @@
 # RACECAR Docker
 
-## Run
-```
-docker run -ti --net=host racecar
-```
 
 # Windows Instructions
 
@@ -13,10 +9,18 @@ docker run -ti --net=host racecar
 3. Install downloaded executable
 
 ## Run on Windows with Mount
-1. Create an empty folder at `C:\Users\Administrator\mount`
-2. Run the command:
+1. Create an empty directory at `C:\Users\Administrator\mount`
+2. Copy the starter Jupyter Notebook into your newly created directory
+3. Run the command:
 ```
-docker run -ti --net=host -v /C/Users/Administrator/mount:/mnt/host racecar
+docker run -ti --net=host -v /C/Users/Administrator/mount:/mnt/jupyter_ws racecar
+```
+
+# Power User Instructions
+
+## Run
+```
+docker run -ti --net=host racecar
 ```
 
 ## Build from Scratch
