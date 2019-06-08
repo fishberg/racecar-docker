@@ -30,6 +30,9 @@ if [ -n "$1" ]; then
   fi
 fi
 
+# add localhost (needed for Windows?)
+echo "127.0.0.1 $HOSTNAME" >> /etc/hosts
+
 # Start the window manager
 openbox > log/openbox.log 2>&1 &
 
