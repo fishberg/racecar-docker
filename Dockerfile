@@ -51,9 +51,9 @@ RUN DEBIAN_FRONTEND=noninteractive \
     python-pip
 RUN pip install jupyter
 RUN jupyter-notebook --generate-config
-RUN echo "c.NotebookApp.allow_remote_access = True" >> /root/.jupyter/jupyter_notebook_config
-RUN echo "c.NotebookApp.allow_root = True" >> /root/.jupyter/jupyter_notebook_config
-RUN echo "c.NotebookApp.open_browser = False" >> /root/.jupyter/jupyter_notebook_config
+RUN echo "c.NotebookApp.allow_remote_access = True" >> /root/.jupyter/jupyter_notebook_config.py
+RUN echo "c.NotebookApp.allow_root = True" >> /root/.jupyter/jupyter_notebook_config.py
+RUN echo "c.NotebookApp.open_browser = False" >> /root/.jupyter/jupyter_notebook_config.py
 ### added c.NotebookApp.ip in entrypoint.sh
 
 # Download NoVNC and unpack

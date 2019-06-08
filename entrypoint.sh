@@ -50,6 +50,8 @@ feh --bg-scale /root/racecar.jpg
 
 # Welcome message
 IP=$(hostname -I | grep -o [0-9.]* | head -1)
+echo "c.NotebookApp.ip '$IP'" >> /root/.jupyter/jupyter_notebook_config.py
+
 printf "Welcome to the racecar docker image!"
 printf "\n\n"
 printf "To use graphical programs like rviz, navigate to"
