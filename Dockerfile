@@ -44,6 +44,18 @@ RUN DEBIAN_FRONTEND=noninteractive \
     python \
     python-numpy
 
+# Install Jupyter Notebook
+EXPOSE 8888
+RUN DEBIAN_FRONTEND=noninteractive \
+    apt-get install -y \
+    python-pip
+RUN pip install jupyter
+RUN jupyter-notebook --generate-config
+RUN echo "c.NotebookApp.allow_remote_access = True" >> /root/.jupyter/jupyter_notebook_config
+RUN echo "c.NotebookApp.allow_root = True" >> /root/.jupyter/jupyter_notebook_config
+RUN echo "c.NotebookApp.open_browser = False" >> /root/.jupyter/jupyter_notebook_config
+### added c.NotebookApp.ip in entrypoint.sh
+
 # Download NoVNC and unpack
 ENV NO_VNC_VERSION 1.1.0
 RUN wget -q https://github.com/novnc/noVNC/archive/v$NO_VNC_VERSION.zip
