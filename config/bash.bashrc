@@ -7,3 +7,7 @@ source /racecar_ws/devel/setup.bash
 
 # Go to the racecar_ws
 cd /racecar_ws
+
+# helpful alias
+alias rosgo='roslaunch racecar_simulator simulate.launch'
+alias go="tmux new-session 'roslaunch racecar_simulator simulate.launch' \; split-window 'jupyter-notebook'"
