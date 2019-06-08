@@ -9,7 +9,7 @@ source /racecar_ws/devel/setup.bash
 #cd /racecar_ws
 
 # Go to the jupyter_ws if it exists
-if [-d /mnt/jupyter_ws]; then
+if [ -d /mnt/jupyter_ws ]; then
     cd /mnt/jupyter_ws
 else
     cd /racecar_ws
