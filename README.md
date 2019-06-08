@@ -10,7 +10,7 @@
 
 ## Run on Windows with Mount
 1. Create an empty directory at `C:\Users\Administrator\mount`
-2. Copy the starter Jupyter Notebook into your newly created directory
+2. Copy the [starter Jupyter Notebook](https://drive.google.com/file/d/1V7mtrIBPxG5_MOrFxLI3VmBNqQitkRKH/view?usp=sharing) into your newly created directory
 3. Run the command:
 ```
 docker run -ti --net=host -v /C/Users/Administrator/mount:/mnt/jupyter_ws racecar
