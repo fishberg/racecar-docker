@@ -4,7 +4,7 @@
 # Windows Instructions
 
 ## Download Docker for Windows
-1. Go to [this](https://hub.docker.com/editions/community/docker-ce-desktop-windows) link
+1. Go to [this](https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe) link
 2. Select "Get Docker Desktop for Windows (Stable)"
 3. Install downloaded executable
 
